@@ -1,2 +1,1 @@
-console.log("hello")
-HISOKA+EGO
+¯\_(ツ)_/¯
