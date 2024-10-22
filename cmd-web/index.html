@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+ 
+<html>
+ 
+<head>
+
+    <meta charset="utf-8">
+    <title>cmd</title>
+    <link href="style.css" rel="stylesheet">
+    
+</head>
+
+<body>
+
+    <div class="size_limit">
+        <div class="main_content" id="main">
+                
+        </div>
+    </div>
+    <div class="command_zone">
+        <input placeholder="entrer la commande ici" id="text_input" class="text_input">
+    </div>
+</body>
+
+</html>
+<script>
+
+var set_cursor = document.getElementById("main");
+var passwordEntered = false;
+
+function addElement(contenu) {
+    var new_case = document.createElement("span");
+    new_case.textContent = contenu;
+    new_case.classList.add("span_element");
+    set_cursor.prepend(new_case);
+  }
+  
+  function updateLastElement(contenu) {
+      var lastSpan = set_cursor.querySelector('span:first-child');
+      if (lastSpan) {
+          lastSpan.textContent = contenu;
+      }
+  }
+  
+  function changeLastElementColor(color) {
+      var lastSpan = set_cursor.querySelector('span:first-child');
+      if (lastSpan) {
+          lastSpan.style.color = color;
+      }
+  }
+
+  function addUserElement(contenu, user) {
+    var new_case = document.createElement("span");
+    new_case.textContent = contenu;
+    new_case.classList.add("span_element");
+    set_cursor.prepend(new_case);
+    updateLastElement(user +"> " + set_cursor.querySelector('.span_element:first-child').textContent)
+  }
+
+addElement("Intel z5 Arthmel 8 1563986: ver 14.35.2.67")
+addElement("Os Ver 1.145.3.13.24 temple Os 6:")
+addElement("starting Os: [")
+for (var i = 0; i < 15; i++) {
+    (function(index) {
+        setTimeout(function() {
+            updateLastElement(set_cursor.querySelector('.span_element:first-child').textContent + " -");
+            if (index === 14) {
+                setTimeout(function() {
+                    updateLastElement(set_cursor.querySelector('.span_element:first-child').textContent + "]");
+                }, 200); // Délai supplémentaire pour ajouter le dernier élément
+
+                setTimeout(function() {
+                    addElement("loading dependances_");
+
+                setTimeout(function() {
+                    addElement("lauching system");
+                }, 200);
+
+                setTimeout(function() {
+                    addElement("ERROR: the system tried to open 'umbunchutils' but was unable to do so. the 'umbunchutils' file is essential to the system. if it cannot be read, a new one will be created.");
+                    changeLastElementColor("yellow");
+                    setTimeout(function() {
+                        addElement("register: successful creation of the register");
+                        setTimeout(function() {
+                            addElement("system loaded");
+                            changeLastElementColor("lime");
+                        setTimeout(function() {
+                            addElement(".");
+                            changeLastElementColor("black");
+        
+                        }, 200);
+                        setTimeout(function() {
+                            addUserElement("enter password:(password is exMaèC) ","system");
+        
+                        }, 200);
+    
+                        }, 400);
+
+                    }, 400);
+                }, 900);
+
+                }, 600);
+                
+
+            }
+        }, 200 * index); // Délai entre chaque ajout
+    })(i);
+}
+
+
+
+document.addEventListener("keyup", function(event) {
+    if (event.keyCode === 13) {
+        var input_command = document.getElementById('text_input').value;
+        addUserElement(input_command, "User3873");
+
+        if (passwordEntered || input_command == "exMaèC") {
+
+            if(passwordEntered){
+
+            }else{
+            passwordEntered = true;
+            addElement(" ", ">");
+            changeLastElementColor("black");
+            addElement("correct password");
+            changeLastElementColor("lime");
+            addElement(" ", ">");
+            changeLastElementColor("black");
+
+            setTimeout(function() {
+                addElement("acces to desktop24390: [");
+                
+                setTimeout(function() {
+                    updateLastElement(set_cursor.querySelector('.span_element:first-child').textContent + " -");
+    
+                    setTimeout(function() {
+                        updateLastElement(set_cursor.querySelector('.span_element:first-child').textContent + " -");
+        
+                        setTimeout(function() {
+                            updateLastElement(set_cursor.querySelector('.span_element:first-child').textContent + " -");
+                            
+                            setTimeout(function() {
+                                updateLastElement(set_cursor.querySelector('.span_element:first-child').textContent + " -");
+                
+                                setTimeout(function() {
+                                    updateLastElement(set_cursor.querySelector('.span_element:first-child').textContent + " -");
+                    
+                                    setTimeout(function() {
+                                        updateLastElement(set_cursor.querySelector('.span_element:first-child').textContent + " - ]");
+                                        addUserElement("successful connection to desktop24390","system");
+                                        addElement(" ");
+                                    }, 200);
+                                }, 200);
+                            }, 200);
+                        }, 200);
+                    }, 200);
+                }, 200);
+            }, 800);
+            }
+        }else{
+            addElement("ERROR: wrong password");
+            changeLastElementColor("red");
+        }
+
+        document.getElementById('text_input').value = "";
+    }
+});
+
+</script>

@@ -1,0 +1,505 @@
+@font-face {
+	font-family: 'main';
+	src: url('tools/Cascadia.ttf') format('truetype');
+}
+
+:root {
+    --button-bg-color: #818181;
+  }
+
+input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    display: none;
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+body {
+    font-family: 'main', sans-serif;
+    color: white;
+    overflow: hidden;
+}
+
+main{
+    background-color: rgb(10, 10, 10);
+    width: 80%;
+    height: 100%;
+}
+
+img{
+    image-rendering: pixelated;
+}
+
+input:focus {
+    outline:  none;
+}
+
+/* header */
+
+header{
+    height: 14%;
+    background-color: rgb(37, 37, 37);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 2%;
+}
+
+.searchBarContainer{
+    width: 20%;
+    height: 40px;
+}
+.searchBar{
+    width: 100%;
+    height: 40px;
+    max-height: 40px;
+    padding-left: 15px;
+    border-radius: 20px;
+    border: #0F0F0F 3px solid;
+    background-color: var(--button-bg-color);
+    display: flex;
+    align-items: center;
+}
+.searchBar span{
+    font-weight: bolder;
+    color: #0F0F0F;
+    font-size: 1.2em;
+    color: rgb(0, 0, 0);
+}
+.searchBar input{
+    height: 100%;
+    width: 70%;
+    max-height: 40px;
+    background-color: var(--button-bg-color);
+    border: none;
+    font-weight: bold;
+    font-size: 1.2em;
+    color: white;
+    overflow: hidden;
+    margin-left: 5px;
+}
+.searchBar input:focus {
+    outline:  none;
+}
+.searchBar img{
+    height: 70%;
+    margin-right: 0;
+}
+
+
+.accountElements{
+    display: flex;
+    width: 22%;
+    height: 60%;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 2%;
+    min-width: 330px;
+}
+
+.appNameContainer{
+    width: 25%;
+}
+
+.appName{
+    align-content: center;
+    font-size: 2.6em;
+}
+
+.signIn{
+    background-color: var(--button-bg-color);
+    width: 30%;
+    min-width: 100px;
+    height: 60%;
+    max-height: 60px;
+    border-radius: 30px;
+    border: rgb(100, 100, 100) 4px solid;
+    color: black;
+    text-align: center;
+    align-content: center;
+    font-size: 1.4em;
+}
+
+.LogIn{
+    background-color: #00000000;
+    width: 30%;
+    height: 60%;
+    max-height: 60px;
+    min-width: 100px;
+    border-radius: 30px;
+    border: rgb(0, 0, 0) 6px solid;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    align-content: center;
+    font-size: 1.4em;
+}
+
+.Profile{
+    height: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    border: black solid 4px;
+}
+
+.Profile img{
+    
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    image-rendering: pixelated;
+}
+
+/* ------ */
+nav{
+    background-color: rgb(15, 15, 15);
+    width: 20%;
+    height: 100%;
+    min-width: 200px;
+    display: flex;
+}
+
+.main_elements{
+    width: 100%;
+    height: 86%;
+    display: flex;
+    flex-direction: row;
+}
+
+
+/* éléments du nav */
+
+.border{
+    width: 8px;
+    height: 90%;
+    background-color: rgb(36, 36, 36);
+    margin-top: 5%;
+    border-radius: 4px;
+    margin-right: 4px;
+}
+
+.chat_elements{
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    scrollbar-color: #242424 #0F0F0F;
+    scrollbar-width: thin;
+}
+
+/* éléments de profil */
+
+.pp{
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 30px;
+    image-rendering: pixelated;
+}
+
+.chat1{
+    background-color: rgba(0, 0, 0, 0.9);
+    border-radius: 20px;
+    width: 80%;
+    height: 100px;
+    margin-top: 5%;
+    margin-left: 5%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+}
+
+.name_elements{
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+}
+
+.nickName{
+    font-size: 1.2em;
+}
+
+.statut{
+    display: flex;
+    align-items: center;
+}
+
+.statut_indicator{
+    background-color: greenyellow;
+    width: 14px;
+    height: 14px;
+    border-radius: 7px;
+}
+
+.statut_desc{
+    margin-left: 5%;
+    color: #818181;
+}
+
+/* chat */
+
+.chatDisc{
+    background-color: rgb(175, 175, 175);
+    width: 60%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    float: inline-start;
+    position: absolute;
+    border: black 1px solid;
+}
+
+.chatMenu{
+    padding-right: 1px;
+    background-color: white;
+    font-weight: bolder;
+    color: black;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dragBar:hover{
+    cursor: move;
+}
+
+.dragBar{
+    width: 83%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 1.5%;
+}
+
+.chatControls{
+    width: 15%;
+    max-width: 130px;
+    height: 90%;
+    align-self: center;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.chatContent{
+    background-color: rgb(0, 0, 0);
+    margin-left: 2px;
+    margin-right: 2px;
+    margin-bottom: 2px;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.chatControlsFullCase, .chatControlsMinusCase, .chatControlsCloseCase{
+    width: 33%;
+    height: 100%;
+    display: flex; 
+    align-items: center;
+    justify-content: space-around;
+}
+
+.chatControlsCloseCase:hover{
+    background-color: red;
+}
+
+.chatControlsFullCase:hover, .chatControlsMinusCase:hover{
+    background-color: rgb(172, 172, 172);
+}
+
+/* Sign In */
+
+.masque{
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.popup{
+    padding-left: 5%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-right: 5%;
+    position: absolute;
+    background-color: #252525;
+    width: 20%;
+    max-width: 600px;
+    max-height: 600px;
+    height: min-content;
+    top: 25%;
+    left: 30%;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+
+.champ{
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5%;
+}
+
+.idInput{
+    border-radius: 12px;
+    height: 15%;
+    width: 60%;
+    padding: 1.5%;
+    background-color: #4e4e4e;
+    border: #303030 2px solid;
+    margin-top: 2%;
+}
+
+.idElements{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: min-content;
+}
+
+h2, h3{
+    padding: 0;
+    margin: 0;
+}
+
+h2{
+    font-size: 2em;
+}
+
+.signInButton{
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: min-content;
+    white-space : nowrap;
+    border: #0F0F0F 5px solid;
+    border-radius: 20px;
+    background-color: #0f0f0f00;
+    color: white;
+    font-weight: bolder;
+    margin-top: 10%;
+}
+
+.signInButton:hover {
+    transition: 0.3s;
+    background: linear-gradient(148deg, rgba(255,111,0,1), rgba(255,218,0,1));
+    color: white;
+    font-size: 1em;
+}
+
+.alertForm{
+    font-weight: bolder;
+    color: red;
+    max-width: 80%;
+}
+
+.forgetPassword{
+    color: #9c9c9c;
+    margin-top: 10px;
+}
+.forgetPassword:hover{
+    transition: 0.3s;
+    color: #ff4800;
+}
+
+/*profile popup*/
+
+.masqueTr{
+    background-color: rgba(0, 0, 0, 0);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.popupaccountName{
+    color: rgb(212, 83, 206);
+    padding-bottom: 5%;
+    font-weight: bolder;
+    align-self: self-start;
+    font-size:1.6em;
+    font-weight: bolder;
+}
+
+.profilePopup{
+    transition: 1s;
+    position: absolute;
+    height: min-content;
+    width: 15%;
+    background-color: #181818;
+    right: 30px;
+    top: 12%;
+    border-radius: 20px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.profilePopup h3{
+    font-weight: 100;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-left: 4%;
+    width: 90%;
+}
+
+.separation{
+    border-top: #4e4e4e solid 2px;
+    margin-bottom: 4%;
+    margin-top: 4%;
+}
+
+#disconnect_button{
+    color: rgb(204, 0, 0);
+    align-self: flex-end;
+}
+
+.hoverSelection:hover{
+    border-top: #3f3f3f solid 3px;
+    border-bottom: #3f3f3f solid 3px;
+}
+
+/*profile settings*/
+
+.popupSettings{
+    padding:3%;
+    position: absolute;
+    background-color: #252525;
+    width: 54%;
+    height: 54%;
+    top: 10%;
+    left: 20%;
+    border-radius: 20px;
+    display: flex;
+}
+
+.settingNav{
+    height: 100%;
+    width: 20%;
+    border-right: #424242  solid 3px;
+    display: flex;
+    flex-direction: column;
+}
+
+.settings{
+    height: 100%;
+    width: 80%;
+}
+
+.settingWallet{
+    color: #ffffff;
+    font-size: 1.2em;
+    margin-top: 20%;
+}

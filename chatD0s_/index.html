@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel=stylesheet type="text/css" href="style.css">
+    <link rel="shortcut icon" href="img/ui/logo_main.ico" type="image/x-icon">
+    <title>chatD0s_</title>
+</head>
+<body>
+
+    <header>
+
+        <div class="appNameContainer">
+            <h1 class="appName" id="appName">
+                > ChatD0s_
+            </h1>
+        </div>
+        
+        <div class="searchBarContainer">
+            <div class="searchBar">
+                <span>C:\></span>
+                <input type="search" spellcheck="false" role="combobox" aria-expanded="false" aria-live="polite" autocomplete="off" maxlength="21" placeholder=". . ." id="searchBar">
+                <img src="img/ui/loupe.png">
+            </div>
+            <div class="search" id="search"></div>
+            
+        </div>
+
+        <div class="accountElements">
+            <div class="signIn" onclick="singInPage()">
+                Sign In
+            </div>
+            <div class="LogIn" onclick="logInPage()">
+                Log In
+            </div>
+            <div class="Profile"  id="accountProfileLogo" onclick="ProfilePage()">
+                <img src="http://86.229.237.34/chatD0s_/img/ui/pp_sample.png">
+            </div>
+
+        </div>
+        
+    </header>
+
+    <div class="main_elements">
+        
+        <nav>
+            <div class="chat_elements" id="friends_list">
+                    
+                <div class="chat1" id="chat0" onclick="openChat(`${querySelector('.nickName').textContent}`)">
+    <img class="pp" src="img/ui/pp_sample.png">
+    <div class="name_elements">
+        <span class="nickName" id="nickName">Jean</span>
+        <div class="statut">
+            <div class="statut_indicator"></div>
+            <span class="statut_desc">en ligne</span>
+        </div>
+                        
+    </div>
+</div>                <div class="chat1" id="chat0" onclick="openChat(`${querySelector('.nickName').textContent}`)">
+    <img class="pp" src="img/ui/pp_sample.png">
+    <div class="name_elements">
+        <span class="nickName" id="nickName">Jean</span>
+        <div class="statut">
+            <div class="statut_indicator"></div>
+            <span class="statut_desc">en ligne</span>
+        </div>
+                        
+    </div>
+</div>                <div class="chat1" id="chat0" onclick="openChat(`${querySelector('.nickName').textContent}`)">
+    <img class="pp" src="img/ui/pp_sample.png">
+    <div class="name_elements">
+        <span class="nickName" id="nickName">Jean</span>
+        <div class="statut">
+            <div class="statut_indicator"></div>
+            <span class="statut_desc">en ligne</span>
+        </div>
+                        
+    </div>
+</div>
+            <div class="border"></div>
+        </nav>
+
+
+        <main id="main">
+
+        </main>
+
+    </div>
+</body>
+</html>
+<script src="engine.js" language="javascript"></script>
+<script src="tools/movingWindows.js" language="javascript"></script>
+<script src="tools/menu.js" language="javascript"></script>

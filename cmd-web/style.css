@@ -1,0 +1,55 @@
+@font-face {
+	font-family: 'basic_cmd';
+	src: url('cmd.ttf') format('truetype');
+}
+
+body{
+    padding: 0;
+    font-family: 'basic_cmd', sans-serif;
+    margin: 0;
+    width: 100%;
+    height: fit-content;
+    background-color: rgb(10, 10, 10);
+    display: flex;
+    flex-direction: column;
+}
+
+
+.main_content{
+    margin-left: 5%;
+    margin-right: 5%;
+    background-color: black;
+    color: white;
+    margin-top: 1%;
+    font-size: 1.5em;
+    display: flex;
+    flex-direction: column-reverse;
+    font-weight: bold;
+    margin-bottom: 6%;
+}
+
+.span_element{
+    margin-top: 0.5%;
+}
+
+.command_zone{
+    position: fixed;
+    bottom: 0;
+    margin: 0;
+    height: 6%;
+    background-color: rgb(36, 36, 36);
+    width: 100%;
+    display: flex;
+    padding-left: 2%;
+    align-items: center;
+}
+
+.text_input{
+    border: 0px;
+    padding: 0.5%;
+    background-color: rgb(75, 75, 75);
+    width: 60%;
+    font-weight: bold;
+    font-size: 1.1em;
+    color: white;
+}
