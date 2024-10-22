@@ -1,0 +1,511 @@
+/* Structure */
+
+@font-face {
+	font-family: 'basic';
+	src: url('basic.ttf') format('truetype')
+}
+
+body
+{
+    font-family: 'basic';
+    margin: 0;
+    text-align: justify;
+    background: center / contain no-repeat url("images/animations/lines_bg_rotated.gif"),
+                350% rgb(0,0,0);
+    background-position-y: 100px;
+    background-attachment: fixed;
+    color: white;
+    font-size: 1.3em;
+    
+}
+
+.opacity_page{
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+}
+
+header{
+    width: 100%;
+    height: 14%;
+    background: url("images/animations/pcb_bg.gif");
+    background-position: 0px 260px;
+    background-size: 50%;
+    border-top: 0%;
+    border-bottom: ridge 15px rgb(95, 95, 95);
+}
+
+.haut_de_page{
+    font-size: 2em;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    border-radius: 40px;
+    transform: rotate(0.5turn);
+}
+.haut_de_page a{
+    color: white;
+}
+
+/* Menu */
+
+.menu_icon img{
+    width: 100%;
+    height: 100%;
+}
+.menu_icon{
+    width: 30%;
+}
+
+.opacity_menu{
+    width: 100%;
+    height: 100%;
+    
+    display: flex;
+    color: white;
+}
+
+.menu_item{
+    width: 10%;
+    height: min-content;
+    margin:2%;
+    border: rgb(0, 0, 0) solid 4px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 20px;
+    color: white;
+    text-align: center;
+    font-size: 1.4em;
+}
+
+
+.menu_element{
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding-left: 2%;
+    padding-right: 2%;
+    width: 8%;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.menu_item:hover{
+    transition: 0.5s;
+    border-color: rgb(0, 255, 34);
+    padding: 17px;
+    font-size: 1.6em;
+}
+
+/* éléments */
+
+.presentationText{
+    width: 70%;
+}
+
+.presentation{
+    display: flex;
+    align-items: center;
+}
+
+.buttonSetup{
+    padding: 1.5%;
+    border-radius: 30px;
+    border: black solid 5px;
+    width: 30%;
+    background: linear-gradient(217deg, #FED77A, #E23366 70.71%),
+                linear-gradient(36deg, #456AD7, #E23366 70.71%),
+                linear-gradient(127deg, #D22991, #E23366 70.71%);
+
+    font-weight: bolder;
+    font-size: 0.9em;
+}
+
+.buttonSetup:active{
+    padding: 1.2%;
+    border-radius: 30px;
+    border: black solid 6px;
+    width: 29%;
+    background: linear-gradient(336deg, #FED77A, #E23366 70.71%),
+                linear-gradient(217deg, #456AD7, #E23366 70.71%),
+                linear-gradient(127deg, #D22991, #E23366 70.71%);
+
+    font-weight: bolder;
+    font-size: 0.9em;
+}
+
+.element{
+    border: 10px solid rgba(0, 0, 0, 0);
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 10%;
+    padding: 3%;
+}
+
+p{
+    font-size: 1.3em;
+}
+
+h3{
+    font-size: 1.9em;
+}
+
+h2{
+    font-size: 2.2em;
+}
+
+dt{
+    font-size: 1.4em;
+}
+
+dd{
+    color: rgb(185, 185, 185);
+}
+
+a{
+    color: white;
+}
+
+ .interrline{
+    text-decoration: line-through;
+}
+/* pub1 */
+
+.pub{
+    width: 500px;
+    height: 120px;
+    background: linear-gradient(-90deg, rgb(51 43 67),rgb(51 43 67), rgb(112, 112, 112));
+    border: 2px black solid;
+    display: flex;
+    flex-direction: row-reverse;
+}
+.cross{
+    border: 2px black solid;
+    background-color: white;
+    height: 15px;
+    width: 15px;
+    margin-top: 0;
+    margin-right: 0;
+}
+
+.image_pub{
+    height: 120px;
+    width: 120px;
+}
+
+.image_pub img{
+    height: 100%;
+    width: 100%;
+}
+
+.contenu_pub{
+    display: flex;
+    align-items: center;
+}
+
+.texte_pub{
+    padding: 30px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.line1{
+    float: right;
+    width: 20%;
+    height: 150%;
+    position: relative;
+    right: 4px;
+    top: -4px;
+    background-color: black;
+    transform: rotate(45deg);
+}
+
+.line2
+{
+    position: relative;
+    top: -4px;
+    right: -4px;
+    width: 20%;
+    height: 150%;
+    background-color: black;
+    transform: rotate(-45deg);
+}
+
+
+.click_here, .click_here img{
+    height: 0;
+}
+
+.airhorn1,
+.airhorn1 img{
+    width: 70%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: -10%;
+    transform: rotate(20deg);
+    pointer-events: none;
+}
+
+.airhorn2,
+.airhorn2 img{
+    width: 55%;
+    height: 70%;
+    position: fixed;
+    bottom: -15%;
+    right: 15%;
+    transform: rotate(-40deg);
+    pointer-events: none;
+}
+
+.airhorn3,
+.airhorn3 img{
+    width: 60%;
+    height: 90%;
+    position: fixed;
+    top: -30%;
+    right: 20%;
+    transform: rotate(90deg);
+    pointer-events: none;
+}
+
+.pub:hover .click_here,
+.pub:hover .click_here img{
+    width: 100%;
+    height: 100%;
+}
+
+.pub:hover{
+    border: rgb(255, 0, 234) solid 10px;
+}
+
+/* pub2 */
+
+.pub2{
+    width: 200px;
+    height: 500px;
+    background: url("images/graph.jpg");
+    background-position: -310px 5px;
+    border: 2px black solid;
+    position: absolute;
+    top: 90%;
+    right: 5%;
+}
+
+
+.texte_pub2{
+    padding: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+}
+
+.cross2{
+    border: 2px black solid;
+    background-color: white;
+    height: 15px;
+    width: 15px;
+    position: relative;
+    top: 0;
+    right: -90%;
+}
+
+.contenu_pub2{
+    
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#ffffff00, #e2e2e2ce);
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.image_pub2{
+    height: 120px;
+    width: 120px;
+}
+
+.image_pub2 img{
+    height: 100%;
+    width: 100%;
+}
+
+.confetti{
+    pointer-events: none;
+    position: absolute;
+    top: 90%;
+    right: 0%;
+}
+
+
+/* table compétances */
+
+.tableCompetances{
+    width: 80%;
+    border-spacing : 40px;
+
+}
+
+.tableCompetances tr td{
+    background-color: rgb(0, 0, 0);
+    padding: 4%;
+    border-radius: 20px;
+}
+
+/* boutique */
+
+.shopContainer{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: start;
+}
+
+.shopItem{
+    background-color: black;
+    width: 80%;
+    height: 200px;
+    border-radius: 30px;
+    margin-bottom: 5%;
+    display: flex;
+    padding: 6%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.shopImg{
+    width: 30%;
+    height: fit-content;
+    border-radius: 10px;
+}
+
+.shopContent{
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+}
+
+.shopDescription{
+    font-size: 1.2em;
+    padding: 0;
+    margin:0;
+    margin-top: 10px;
+    
+}
+
+.shopPrix{
+    margin:0;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.shopTitle{
+    margin:0;
+}
+
+.shopUi{
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+    margin-left: 0;
+    margin-top: 40px;
+}
+
+.UiImg{
+    width: 25px;
+}
+
+.quantityUi{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 70%;
+}
+
+.shopInput{
+    width: 30%;
+    background-color: rgb(81, 82, 82);
+    padding: 3%;
+    border: #2c2c2c solid 2px;
+    border-radius: 8px;
+    color: white;
+}
+
+/* emauche */
+.tableEmbauche{
+    border-color: black 6px solid;
+    border-collapse : collapse;
+}
+
+.tableEmbauche tr td textarea{
+    height: 300px;
+    margin: 10%;
+    width: 90%;
+    color: black;
+}
+
+.tableEmbaucheTarget{
+    border: black 5px solid;
+    padding: 2%;
+    text-align: left;
+}
+
+.tableEmbaucheInputCell{
+    width: 60%;
+    padding-left: 5%;
+}
+
+.tableEmbaucheInput{
+    width: 100%;
+    height: 180%;
+    border-radius: 20px;
+    padding: 2%;
+    background-color: rgba(192, 192, 192, 0.507);
+    border: white 0px solid;
+    color: black;
+}
+
+::placeholder {
+    color: rgb(0, 0, 0);
+}
+
+.envoyerEmbaucher{
+    padding: 3%;
+    font-size: 1.2em;
+    border-radius: 20px;
+    background: linear-gradient(0.25turn, rgb(255, 115, 0), rgb(255, 153, 0));
+    border: rgb(0, 0, 0) 3px solid;
+    width: min-content;
+}
+
+.envoyerEmbaucher:active{
+    transition: 0.25s;
+    opacity: 0.8;
+    border: rgb(0, 0, 0) 4px solid;
+    padding: 2.5%;
+}
+
+.eventTarget{
+    color: red;
+    font-size: 1.3em;
+    text-align: center;
+}
+
+.tragetDiv{
+    display: flex;
+    margin-top: 4%;
+    flex-direction: column;
+    margin-left: 20%;
+    width: 50%;
+    align-items: center;
+}

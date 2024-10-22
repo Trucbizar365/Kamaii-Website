@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+ 
+<html>
+ 
+<head>
+
+    <meta charset="utf-8">
+    <title>CV</title>
+    <link href="style.css" rel="stylesheet">
+    <link rel="shortcut icon" href="images/Bitcoin.ico" type="image/x-icon">
+    
+</head>
+
+<body>
+
+    <header>
+        <div class="opacity_menu">
+                        
+                    <div class="menu_element">
+                        <div class="menu_icon"><img src="images/menu.png"></div>
+                        <div><h2>Menu</h2></Menu></div>
+                    </div>
+                        
+                <div class="menu_item"><a href="index.html">accueil</a></div>
+                <div class="menu_item"><a href="pages/competances.html">compétences</a></div>
+                <div class="menu_item"><a href="pages/diplomes.html">Boutique</a></div>
+                <div class="menu_item"><a href="pages/experiences.html">expériences</a></div>
+                <div class="menu_item"><a href="pages/embauche.html">m'embaucher</a></div>
+        </div>
+    </header>
+
+    
+    <div class="airhorn1" id="airhorn1"><img src="images/airhorn.png"></div>
+    <div class="airhorn2" id="airhorn2"><img src="images/airhorn.png"></div>
+    <div class="airhorn3" id="airhorn3"><img src="images/airhorn.png"></div>
+
+
+    <div class="opacity_page">
+        <div class="element">
+            <div class="presentation">
+                <div class="presentationText">
+                    <h2>Présentation.</h2>
+                    <p>
+                        <h3>Fiche technique:</h3><p></p>
+                        <ul>
+                            <li>Prénom: ########</li>
+                            <li>nom: #######</li>
+                            <li>type: humain</li>
+                            <li>diamètre des cheuveux: 40µm</li>
+                            <li>débit du coeur: 20L/min</li>
+                            <li>puissance des muscles: 37,8W</li>
+                            
+                        </ul>
+                    </p>
+                </div>
+                <button class="buttonSetup">cliquez ici pour que la page fonctionne correctement</button>
+            </div><br>
+                    <br>
+                    <h3>Description: </h3><br><p>
+                        Mes activités principales sont: manger, dormir et boire. Cela me prend la moitié de mon temps en moyenne. Sinon mes activités secondaires sont le bricolage, le montage vidéo, la couture et beaucoup d'activité manuelle,
+                         les jeux vidéos, et la programmation des fois, mais pas la lecture. Les activités que je n'aime pas: la lecture.
+                        J'ai toujours su que je pouvais accomplir de grandes choses, pendant toutes ces années j'ai fais beaucoup de progrès, à ma naissance je mesurais 47cm et je pesais 2,5kg. en 17 ans j'ai réussi à multiplier ma taille
+                         par 3,44680851 environ et mon poids par 18 !
+                        <br><br> 
+                        <!-- pub-->
+                        <div class="pub" id="pub">
+                            <div class="cross"><div class="line1"></div><div class="line2"></div></div>
+                           <div class="contenu_pub">
+                                <div class="texte_pub">Cliquez ici pour que squeezie t'offre un Iphone!</div>
+                                <div class="image_pub"><img src="images/animations/nokia.gif"></div>
+                           </div>
+                           <div class="click_here"><img src="images/animations/click_here.gif"></div>
+                           <audio src="sons/airhorn.mp3" id="airhorn"></audio>
+                           
+                        </div>
+
+                        <br> 
+                        
+                </p>
+                
+        </div>
+    </div>
+
+    <div class="haut_de_page"><a href="#top">V</a></div>
+
+   </body>
+ 
+</html>
+<script>
+var element = document.getElementById('pub');
+var son = document.getElementById('airhorn');
+let airhorn1 = document.getElementById("airhorn1");
+let airhorn2 = document.getElementById("airhorn2");
+let airhorn3 = document.getElementById("airhorn3");
+
+airhorn1.style.display = "none";
+airhorn2.style.display = "none";
+airhorn3.style.display = "none";
+ 
+element.onmouseover = function(){
+    son.play();
+    airhorn1.style.display = "block";
+    airhorn2.style.display = "block";
+    airhorn3.style.display = "block";
+};
+
+element.onmouseout = function(){
+    airhorn1.style.display = "none";
+    airhorn2.style.display = "none";
+    airhorn3.style.display = "none";
+};
+
+element.onclick = function(){
+    document.location.href="pages/virus/virus.html";
+};
+</script>
+
