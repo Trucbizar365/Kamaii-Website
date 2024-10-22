@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+ 
+<html>
+ 
+<head>
+
+    <meta charset="utf-8">
+    <title>CV</title>
+    <link href="../style.css" rel="stylesheet">
+    <link rel="shortcut icon" href="../images/Bitcoin.ico" type="image/x-icon">
+    
+</head>
+
+<body>
+
+    <header>
+        <div class="opacity_menu">
+                        
+                    <div class="menu_element">
+                        <div class="menu_icon"><img src="../images/menu.png"></div>
+                        <div><h2>Menu</h2></Menu></div>
+                    </div>
+                        
+                <div class="menu_item"><a href="../index.html">accueil</a></div>
+                <div class="menu_item"><a href="competances.html">compétences</a></div>
+                <div class="menu_item"><a href="diplomes.html">Boutique</a></div>
+                <div class="menu_item"><a href="experiences.html">expériences</a></div>
+                <div class="menu_item"><a href="embauche.html">m'embaucher</a></div>
+        </div>
+    </header>
+
+    <div class="haut_de_page"><a href="#top">V</a></div>
+
+    <div class="opacity_page">
+        <div class="element">
+            
+            <table class="tableEmbauche">
+
+                <tr>
+                    <td class="tableEmbaucheTarget">
+                        Nom: 
+                    </td>
+                    <td class="tableEmbaucheInputCell">
+                        <input type="text" placeholder="entrer notre nom" class="tableEmbaucheInput" id="name">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tableEmbaucheTarget">
+                        Prénom: 
+                    </td>
+                    <td class="tableEmbaucheInputCell">
+                        <input type="text" placeholder="entrer notre prénom" class="tableEmbaucheInput" id="firstname">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tableEmbaucheTarget">
+                        Religion: 
+                    </td>
+                    <td class="tableEmbaucheInputCell">
+                        <input type="text" placeholder="entrer votre religion" class="tableEmbaucheInput" id="religion">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tableEmbaucheTarget">
+                        e-mail: 
+                    </td>
+                    <td class="tableEmbaucheInputCell">
+                        <input type="text" placeholder="entrer votre e-mail" class="tableEmbaucheInput" id="email">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tableEmbaucheTarget">
+                        Vos motivations pour m'embaucher:  
+                    </td>
+                    <td>
+                        <textarea placeholder="entrer votre motivation" class="tableEmbaucheInput" id="motivation"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tableEmbaucheTarget">
+                        Salaire que je peux espérer: 
+                    </td>
+                    <td class="tableEmbaucheInputCell">
+                        <input type="number" placeholder="entrer le montant du salaire" class="tableEmbaucheInput" id="salaire">
+                    </td>
+                </tr>
+
+            </table>
+            <div class="tragetDiv">
+
+            <button class="envoyerEmbaucher" type="button" id="button">envoyer</button>
+
+            <h3 class="eventTarget" id="event"></h3>
+            </div>
+
+        </div>
+    </div>
+   </body>
+ 
+</html>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script>
+var button = document.getElementById('button');
+var event = document.getElementById("event");
+button.onclick = function(){
+    var salaire = document.getElementById("salaire").value;
+    var motivation = document.getElementById("motivation").value;
+    var religion = document.getElementById("religion").value;
+    var email = document.getElementById("email").value;
+    var firstname = document.getElementById("firstname").value;
+    var name = document.getElementById("name").value;
+    if (name != '' && firstname!= '' && religion != '' && email != '' && motivation != '' && salaire != '') {
+        if (salaire<5000) {
+            event.textContent="le salaire entré est trop bas";
+        }else{
+            event.textContent="Un e-mail de confirmation vous a été envoyé (si l'e-mail entré était valide)";
+            fetch('https://api.elasticemail.com/v2/email/send', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: new URLSearchParams({
+                    apiKey: 'EA8551966BE762114F01D5C74A1DB8BA422127ECA94CBB57A3871C3EDA24E155F393C04A6DF94479845FE0E74327C3B3',
+                    subject: 'Réponse recrutement Anaëlle',
+                    from: 'cvanaellerecrutement@gmail.com',
+                    to: email,
+                    bodyText: 'Ceci est le corps du message.'
+                }),
+            })
+            .then(response => response.json())
+            .then(data => console.log(data))
+            .catch(error => console.error(error));
+        }
+    } else {
+        event.textContent = "Veuillez remplir tous les champs";
+    }
+};
+</script>
